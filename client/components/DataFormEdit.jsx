@@ -44,8 +44,10 @@ componentWillUpdate(nextProps){
          <div>
          <h2>Edit an Item!</h2>
           <form onSubmit={this.submitData.bind(this)}>
-            <input name="text" placeholder="text" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
-            <input name="numbers" placeholder="123" type="number" value={numbers} onChange={(evt) => this.AddToData(evt)}/>
+
+            <input name="text" placeholder="Task" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
+            <input name="numbers" placeholder="Priority" type="number" value={numbers} onChange={(evt) => this.AddToData(evt)}/>
+
             <input type="submit"/>
           </form>
         </div>

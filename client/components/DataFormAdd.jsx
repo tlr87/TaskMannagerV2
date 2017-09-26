@@ -31,7 +31,7 @@ componentWillUpdate(nextProps){
   submitData(evt) {
     evt.preventDefault()
     this.props.dispatch(postData(this.state.data))
-    
+
     //dispatch your data to some kind of postData request
   }
 
@@ -41,10 +41,16 @@ componentWillUpdate(nextProps){
       const {text, numbers} = this.state.data
        return (
          <div>
-         <h2>Add an Item!</h2>
+         <h2>Add a Task!</h2>
           <form onSubmit={this.submitData.bind(this)}>
-            <input name="text" placeholder="text" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
-            <input name="numbers" placeholder="123" type="number" value={numbers} onChange={(evt) => this.AddToData(evt)}/>
+            <input name="Project" placeholder="Project" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
+            <input name="Task" placeholder="Task" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
+            <input name="Priority" placeholder="Priority" type="number" value={numbers} onChange={(evt) => this.AddToData(evt)}/>
+            <input name="Details" placeholder="Details" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
+            <select name="Colour" onChange={(evt)=> this.AddToData(evt)}>
+              <option value={"blue"}>Blue</option>
+              <option value={"yellow"}>Yellow</option>
+            </select>
             <input type="submit"/>
           </form>
         </div>

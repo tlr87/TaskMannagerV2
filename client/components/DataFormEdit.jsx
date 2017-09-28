@@ -39,17 +39,23 @@ componentWillUpdate(nextProps){
 
 
   render() {
-      const {text, numbers} = this.state.data
+      const {Project, Task, Person, Priority, Details, Colour} = this.state.data
        return (
          <div>
          <h2>Edit an Item!</h2>
-          <form onSubmit={this.submitData.bind(this)}>
+           <form onSubmit={this.submitData.bind(this)}>
+             <input name="Project" placeholder="Project" value={Project} type="text" onChange={(evt) => this.AddToData(evt)}/>
+             <input name="Task" placeholder="Task" value={Task} type="text" onChange={(evt) => this.AddToData(evt)}/>
+             <input name="Person" placeholder="Person" value={Person} type="text" onChange={(evt) => this.AddToData(evt)}/>
+             <input name="Priority" placeholder="Priority" value={Priority} type="number" onChange={(evt) => this.AddToData(evt)}/>
+             <input name="Details" placeholder="Details" value={Details} type="text" onChange={(evt) => this.AddToData(evt)}/>
+             <select name="Colour" value={Colour} onChange={(evt)=> this.AddToData(evt)}>
+               <option value={"blue"}>Blue</option>
+               <option value={"yellow"}>Yellow</option>
+             </select>
+             <input type="submit"/>
+           </form>
 
-            <input name="text" placeholder="Task" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
-            <input name="numbers" placeholder="Priority" type="number" value={numbers} onChange={(evt) => this.AddToData(evt)}/>
-
-            <input type="submit"/>
-          </form>
         </div>
         )
       }

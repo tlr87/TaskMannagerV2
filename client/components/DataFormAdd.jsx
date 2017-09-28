@@ -45,6 +45,7 @@ componentWillUpdate(nextProps){
           <form onSubmit={this.submitData.bind(this)}>
             <input name="Project" placeholder="Project" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
             <input name="Task" placeholder="Task" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
+            <input name="Person" placeholder="Person" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
             <input name="Priority" placeholder="Priority" type="number" value={numbers} onChange={(evt) => this.AddToData(evt)}/>
             <input name="Details" placeholder="Details" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
             <select name="Colour" onChange={(evt)=> this.AddToData(evt)}>

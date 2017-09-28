@@ -25,12 +25,19 @@ editItem(item) {
       <div>
         <ul>
           <h1>Item</h1>
-          {this.props.data.map((item,key)=>{
-            return <li key={key}>{item.text}:{item.numbers}{` `}
-            <a onClick={(evt)=> this.deleteItem(item)}>Del</a> {` `}
-            <a onClick={(evt)=> this.editItem(item)}>Edit</a>
-            </li>
-          })}
+            {this.props.data.map((item,key)=>{
+                return <li key={key}>
+                  ID: {item.id}<br/>
+                Project: {item.Project}<br/>
+              Task:{item.Task}<br/>
+            Person:{item.Person}<br/>
+          Priority:{item.Priority}<br/>
+        Details:{item.Details}<br/>
+      Colour:{item.Colour}
+                  <a onClick={(evt)=> this.deleteItem(item)}>Del</a> {` `}
+                  <a onClick={(evt)=> this.editItem(item)}>Edit</a>
+                </li>
+              })}
         </ul>
         <DataFormEdit/>
       </div>

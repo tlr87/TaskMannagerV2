@@ -26,7 +26,7 @@ editItem(item) {
         <ul>
           <h1>DataTable</h1>
           {this.props.data.map((item,key)=>{
-            return <li key={key}> <Link to={`/item/${item.id}`} >{item.text}</Link></li>
+            return <li key={key}> <Link to={`/item/${item.id}`} >{item.Task}</Link></li>
           })}
         </ul>
         <DataFormAdd/>

@@ -23,12 +23,16 @@ editItem(item) {
   render(){
     return(
       <div>
-        <ul>
-          <h1>DataTable</h1>
+        <h1>DataTable</h1>
+          <ul>
           {this.props.data.map((item,key)=>{
-            return <li key={key}> <Link to={`/item/${item.id}`} >{item.Task}</Link></li>
+            return <li key={key}> <Link to={`/item/${item.Project}`} >{item.Project}</Link></li>
           })}
         </ul>
+
+
+
+
         <DataFormAdd/>
       </div>
     )

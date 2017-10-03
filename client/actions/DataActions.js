@@ -107,6 +107,34 @@ export function getDataId(id){
   }
 }
 
+
+
+// Get Project
+export const receiveDataProj = (data) => {
+  return {
+    type:  'RECEIVE_DATA_PROJ',
+    data
+  }
+}
+
+export function getDataProj(Project){
+  return(dispatch) => {
+    request
+    .get('/v1/api/'+Project)
+    .end((err, res)=> {
+      if (err){
+        console.log(err.message)
+        return
+      }
+      dispatch(receiveData(res.body))
+    })
+  }
+}
+
+
+
+
+
 // Get
 export const receiveData = (data) => {
   return {

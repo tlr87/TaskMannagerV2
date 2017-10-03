@@ -20,13 +20,19 @@ editItem(item) {
   this.props.dispatch(getData())
 }
 
+
+
+
   render(){
+    const projects = this.props.data.map((task) => task.Project)
+    const uniqueProjects = Array.from(new Set(projects))
+    console.log(uniqueProjects)
     return(
       <div>
         <ul>
           <h1>DataTable</h1>
-          {this.props.data.map((item,key)=>{
-            return <li key={key}> <Link to={`/item/${item.id}`} >{item.Task}</Link></li>
+          {uniqueProjects.map((ProjName,key)=>{
+            return <li key={key}> <Link to={`/item/${ProjName}`} >{ProjName}</Link></li>
           })}
         </ul>
         <DataFormAdd/>

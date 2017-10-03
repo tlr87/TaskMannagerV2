@@ -29,15 +29,20 @@ editItem(item) {
     console.log(uniqueProjects)
     return(
       <div>
+
+      <h2>Projects</h2>
         <ul>
-          <h1>DataTable</h1>
-          {uniqueProjects.map((ProjName,key)=>{
-            return <li key={key}> <Link to={`/item/${ProjName}`} >{ProjName}</Link></li>
+          {uniqueProjects.map((ProjName,key,item)=>{
+            return <li key={key}> <Link to={`${ProjName}/item/1`} >{ProjName}</Link></li>
           })}
         </ul>
 
-
-
+        <h2>Tasks</h2>
+           <ul>
+           {this.props.data.map((item,key)=>{
+             return <li key={key}> <Link to={`/item/${item.id}`} >{item.Task}</Link></li>
+           })}
+         </ul>
 
         <DataFormAdd/>
       </div>

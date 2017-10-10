@@ -5,7 +5,7 @@ import {postData, getData, getDataId, editData, delData} from '../actions/DataAc
 
 import DataFormAdd from './DataFormAdd'
 
-class ApiDataReader extends React.Component{
+class Project extends React.Component{
 
 
 componentDidMount(){
@@ -24,22 +24,18 @@ editItem(item) {
 
 
   render(){
-    const projects = this.props.data.map((task) => task.Project)
-    const uniqueProjects = Array.from(new Set(projects))
-    console.log(uniqueProjects)
+    const projParam = this.props.match.params.Project
+    console.log(projParam);
     return(
       <div>
 
-      <h2>Projects</h2>
-        <ul>
-          {uniqueProjects.map((ProjName,key,item)=>{
-            return <li key={key}><Link to={`${ProjName}`} >{ProjName}</Link></li>
-          })}
-        </ul>
-
         <h2>Tasks</h2>
            <ul>
-           {this.props.data.map((item,key)=>{
+           {this.props.data
+             .filter((item)=>{
+               return item.Project === projParam
+             })
+             .map((item,key)=>{
              return <li key={key}> <Link to={`/item/${item.id}`} >{item.Task}</Link></li>
            })}
          </ul>
@@ -56,4 +52,4 @@ const mapStateToProps = (state) => {
 
 }
 
-export default connect(mapStateToProps)(ApiDataReader)
+export default connect(mapStateToProps)(Project)

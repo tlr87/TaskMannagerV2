@@ -5,3 +5,46 @@ body {
 button {
   background-color: "red";
 }
+
+input[type="text"], input[type="number"] {
+  height: 19px;
+}
+
+select {
+  width: 65px;
+  height: 25px;
+}
+
+option{
+}
+
+
+
+
+.Blue {
+  background-color: Blue;
+}
+
+.Red{
+  background-color: Red;
+}
+
+.Yellow{
+  background-color: Yellow;
+}
+
+.Green{
+  background-color: Green;
+}
+
+.Orange{
+  background-color: Orange;
+}
+
+.Purple{
+    background-color: Purple;
+}
+
+.Teal{
+    background-color: Teal;
+}

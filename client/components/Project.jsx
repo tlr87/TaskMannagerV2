@@ -22,30 +22,26 @@ editItem(item) {
 
   render(){
     const projParam = this.props.match.params.Project
+    const projPerson = this.props.match.params.Project
     console.log(projParam);
-    const person = this.props.data.map((task) => task.Person)
-    const uniquePerson = Array.from(new Set(person))
-    console.log(uniquePerson)
     return(
-<div>
-    <h2>People</h2>
-      <ul>
-        {this.props.data
-        .filter((item)=>{return item.Project === projParam})
-        .map((item,key)=>{
-        return <li key={key}>{item.Person}</li>
-        })}
-      </ul>
-    <h2>Tasks</h2>
-      <ul>
-        {this.props.data
-         .filter((item)=>{return item.Project === projParam})
-         .map((item,key)=>{
-         return <li key={key}> <Link to={`/item/${item.id}`}>{item.Task}</Link></li>
-        })}
-      </ul>
-    <DataFormAdd/>
-</div>
+    <div>
+        <h2>People</h2>
+          <ul>
+            {this.props.data
+            .filter((item)=>{return item.Project === projPerson})
+            .map((item,key)=>{return <li key={key}>{item.Person}</li>})}
+          </ul>
+        <h2>Tasks</h2>
+          <ul>
+            {this.props.data
+             .filter((item)=>{return item.Project === projParam})
+             .map((item,key)=>{
+             return <li key={key}> <Link to={`/item/${item.id}`}>{item.Task}</Link></li>
+            })}
+          </ul>
+        <DataFormAdd/>
+    </div>
     )
   }
 }

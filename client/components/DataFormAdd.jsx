@@ -40,7 +40,25 @@ componentWillUpdate(nextProps){
   render() {
       const {text, numbers} = this.state.data
        return (
-          <div>
+<div>
+  <form className="form">
+      <div className="switch-field">
+        <div className="switch-title">Three fields? Sure.</div>
+        <input type="radio" id="switch_3_left" name="switch_3" value="yes"  />
+        <label for="switch_3_left">One</label>
+        <input type="radio" id="switch_3_center" name="switch_3" value="maybe" />
+        <label for="switch_3_center">Two</label>
+              <input type="radio" id="switch_3_right" name="switch_3" value="no" />
+        <label for="switch_3_right">Three</label>
+      </div>
+  </form>
+
+
+
+
+
+
+
             <h2>Add a Task!</h2>
               <form onSubmit={this.submitData.bind(this)}>
                  <input name="Project" placeholder="Project" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
@@ -49,16 +67,11 @@ componentWillUpdate(nextProps){
                  <input name="Priority" placeholder="Priority" type="number" value={numbers} onChange={(evt) => this.AddToData(evt)}/>
                  <input name="Details" placeholder="Details" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
                  <h4>Task Colour</h4>
-                  <div onChange={(evt) => this.AddToData(evt)}>
-                    <input type="radio" className="Blue" value="Blue" name="Colour"/> Blue
-                    <input type="radio" className="Red" value="Red" name="Colour"/> Red
-                    <input type="radio" className="Yellow" value="Yellow" name="Colour"/> Yellow
-                    <input type="radio" className="Green" value="Green" name="Colour"/> Green
-                    <input type="radio" className="Orange" value="Orange" name="Colour"/> Orange
-                    <input type="radio" className="Purple" value="Purple" name="Colour"/> Purple
-                    <input type="radio" className="Teal" value="Teal" name="Colour"/> Teal
-                  </div>
-                  <br/>
+                 <div className="radioButtons" onChange={(evt) => this.AddToData(evt)}>
+                    <input type="radio" id="radio" value="Blue" name="Colour"/><label for="Blue">Blue</label>
+                    <input type="radio" id="radio" value="Red" name="Colour"/><label for="Red">Red</label>
+                </div>
+                <br/>
                <input type="submit"/>
             </form>
           </div>

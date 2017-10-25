@@ -40,25 +40,7 @@ componentWillUpdate(nextProps){
   render() {
       const {text, numbers} = this.state.data
        return (
-<div>
-  <form className="form">
-      <div className="switch-field">
-        <div className="switch-title">Three fields? Sure.</div>
-        <input type="radio" id="switch_3_left" name="switch_3" value="yes"  />
-          <label className="Blue" for="switch_3_left"><span>One</span></label>
-        <input type="radio" id="switch_3_center" name="switch_3" value="maybe" />
-          <label className="Red" for="switch_3_center"><span>Two</span></label>
-        <input type="radio" id="switch_3_right" name="switch_3" value="no" />
-          <label className="Yellow" for="switch_3_right"><span>Three</span></label>
-      </div>
-  </form>
-
-
-
-
-
-
-
+         <div className="DataForm">
             <h2>Add a Task!</h2>
               <form className="form" onSubmit={this.submitData.bind(this)}>
                 <div className="switch-field">
@@ -69,20 +51,19 @@ componentWillUpdate(nextProps){
                  <input name="Details" placeholder="Details" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>
                  <h4>Task Colour</h4>
                  <div className="radioButtons" onChange={(evt) => this.AddToData(evt)}>
-
-                   <input type="radio" className="Blue" value="Blue" name="Colour"/> <label for="Blue">Blue</label>
-                   <input type="radio" className="Red" value="Red" name="Colour"/> <label for="Red">Red</label>
-                   <input type="radio" className="Yellow" value="Yellow" name="Colour"/><label for="Yellow">Yellow</label>
-                   <input type="radio" className="Green" value="Green" name="Colour"/><label for="Green">Green</label>
-                   <input type="radio" className="Orange" value="Orange" name="Colour"/><label for="Orange">Orange</label>
-                   <input type="radio" className="Purple" value="Purple" name="Colour"/><label for="Purple">Purple</label>
-                   <input type="radio" className="Teal" value="Teal" name="Colour"/><label for="Teal">Teal</label>
+                   <input type="radio" value="Blue" name="Colour"/><label className="Blue" for="Blue"><span>Blue</span></label>
+                   <input type="radio" value="Red" name="Colour"/><label className="Red"  for="Red"><span>Red</span></label>
+                   <input type="radio" value="Yellow" name="Colour"/><label className="Yellow" for="Yellow"><span>Yellow</span></label>
+                   <input type="radio" value="Orange" name="Colour"/><label className="Orange" for="Orange"><span>Orange</span></label>
+                   <input type="radio" value="Green" name="Colour"/><label className="Green" for="Green"><span>Green</span></label>
+                   <input type="radio" value="Purple" name="Colour"/><label className="Purple" for="Purple"><span>Purple</span></label>
+                   <input type="radio" value="Teal" name="Colour"/><label className="Teal" for="Teal"><span>Teal</span></label>
                 </div>
-                <br/>
-               <input type="submit"/>
-              </div>
-            </form>
-          </div>
+               <br/>
+              <input type="submit"/>
+            </div>
+          </form>
+        </div>
         )
       }
 }

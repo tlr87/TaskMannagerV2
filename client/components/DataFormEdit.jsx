@@ -41,7 +41,7 @@ componentWillUpdate(nextProps){
   render() {
       const {Project, Task, Person, Priority, Details, Colour} = this.state.data
        return (
-         <div>
+         <div className="DataForm">
          <h2>Edit an Item!</h2>
            <form onSubmit={this.submitData.bind(this)}>
              <input name="Project" placeholder="Project" value={Project} type="text" onChange={(evt) => this.AddToData(evt)}/>
@@ -50,14 +50,14 @@ componentWillUpdate(nextProps){
              <input name="Priority" placeholder="Priority" value={Priority} type="number" onChange={(evt) => this.AddToData(evt)}/>
              <input name="Details" placeholder="Details" value={Details} type="text" onChange={(evt) => this.AddToData(evt)}/>
                <h4>Task Colour</h4>
-                <div onChange={(evt) => this.AddToData(evt)}>
-                  <input type="radio" className="Blue" value="Blue" name="Colour"/> Blue
-                  <input type="radio" className="Red" value="Red" name="Colour"/> Red
-                  <input type="radio" className="Yellow" value="Yellow" name="Colour"/> Yellow
-                  <input type="radio" className="Green" value="Green" name="Colour"/> Green
-                  <input type="radio" className="Orange" value="Orange" name="Colour"/> Orange
-                  <input type="radio" className="Purple" value="Purple" name="Colour"/> Purple
-                  <input type="radio" className="Teal" value="Teal" name="Colour"/> Teal
+                <div className="radioButtons" onChange={(evt) => this.AddToData(evt)}>
+                  <input type="radio" value="Blue" name="Colour"/><label className="Blue" for="Blue"><span>Blue</span></label>
+                  <input type="radio" value="Red" name="Colour"/><label className="Red"  for="Red"><span>Red</span></label>
+                  <input type="radio" value="Yellow" name="Colour"/><label className="Yellow" for="Yellow"><span>Yellow</span></label>
+                  <input type="radio" value="Orange" name="Colour"/><label className="Orange" for="Orange"><span>Orange</span></label>
+                  <input type="radio" value="Green" name="Colour"/><label className="Green" for="Green"><span>Green</span></label>
+                  <input type="radio" value="Purple" name="Colour"/><label className="Purple" for="Purple"><span>Purple</span></label>
+                  <input type="radio" value="Teal" name="Colour"/><label className="Teal" for="Teal"><span>Teal</span></label>
                 </div>
                 <br/>
              <input type="submit"/>

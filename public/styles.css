@@ -1,3 +1,40 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: black;
+  background-image: url(images/StarSky.jpg);
+  color:#fff;
+  padding:35px;
+}
+
+a {
+  color: White;
+  text-decoration: none;
+  display: block;
+}
+
+h2 {
+  color: White;
+  padding:10px;
+}
+
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a:hover {
+  color: #565656;
+}
+
+
+
+
+
+
+
 .Blue {
   background-color: Blue!important;
 
@@ -14,19 +51,19 @@
 }
 
 .Green{
-  background-color: Green;
+  background-color: Green!important;
 }
 
 .Orange{
-  background-color: Orange;
+  background-color: Orange!important;
 }
 
 .Purple{
-    background-color: Purple;
+    background-color: Purple!important;
 }
 
 .Teal{
-    background-color: Teal;
+    background-color: Teal!important;
 }
 
 
@@ -35,18 +72,29 @@
 .switch-field {
   font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
   padding: 40px;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .switch-title {
   margin-bottom: 6px;
 }
 
+.DataForm {
+    width: 720px;
+    background-color:#000;
+    border:2px solid #fff;
+    padding: 5px;
+    margin:30px 0px;
+}
+
+.Component {
+  padding: 2%;
+  color: White;
+}
 
 span {
     background: rgba(0,0,0,.8);
     padding: 2px 8px;
-    border-radius: 9px;
 }
 
 input[type=radio] {
@@ -63,22 +111,42 @@ input[type="text"]{
   padding: 4px;
   margin-left: 23px;
   margin-bottom: 16px;
+  border:2px solid #fff;
+	height: 22px;
+	width: 230px;
+  background-color:#000;
+  color:#fff;
 }
+
 
 input[type="number"]{
   border-radius: 12px;
   padding: 4px;
   margin-left: 23px;
   margin-bottom: 16px;
+  border:2px solid #fff;
+  height: 22px;
+  width: 230px;
+  background-color:#000;
+  color:#fff;
 }
 
+input span{
+  background-color:#000;
+  opacity:0.8;
+  border-radius:0!important;
+}
+
+input:focus {
+  outline:none;
+}
 
 .switch-field label {
   display: inline-block;
   width: 60px;
-  background-color: #e4e4e4;
+  height: 20px;
+
   color: #fff;
-  text-outline: 2px 2px #ff0000;
   font-size: 14px;
   font-weight: normal;
   text-align: center;
@@ -100,7 +168,7 @@ input[type="number"]{
 
 .switch-field input:checked + label {
   background-color: #e4e4e4!important;
-  -webkit-box-shadow: none;
+  -webkit-box-shadow: none;q
   box-shadow: none;
   color: #000;
 }

@@ -41,7 +41,7 @@ componentWillUpdate(nextProps){
   render() {
       const {Project, Task, Person, Priority, Details, Colour} = this.state.data
        return (
-         <div className="DataForm">
+         <div className="Component DataForm">
          <h2>Edit an Item!</h2>
            <form onSubmit={this.submitData.bind(this)}>
              <input name="Project" placeholder="Project" value={Project} type="text" onChange={(evt) => this.AddToData(evt)}/>

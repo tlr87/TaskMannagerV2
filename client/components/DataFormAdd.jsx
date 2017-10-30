@@ -40,8 +40,8 @@ componentWillUpdate(nextProps){
   render() {
       const {text, numbers} = this.state.data
        return (
-         <div className="DataForm">
-            <h2>Add a Task!</h2>
+         <div className="Component DataForm">
+            <h3>Add a Task!</h3>
               <form className="form" onSubmit={this.submitData.bind(this)}>
                 <div className="switch-field">
                  <input name="Project" placeholder="Project" value={text} type="text" onChange={(evt) => this.AddToData(evt)}/>

@@ -25,17 +25,18 @@ editItem(item) {
     const uniqueProjects = Array.from(new Set(projects))
     console.log(uniqueProjects)
     return(
+
       <div className="Reader">
-        <div className="Projects">
-        <h2>Projects</h2>
+        <div className=" Component Projects">
+        <h3>Projects</h3>
             <ul>
               {uniqueProjects.map((ProjName,key,item)=>{
               return <li key={key}><Link to={`${ProjName}`} >{ProjName}</Link></li>
               })}
             </ul>
           </div>
-          <div className="Task">
-        <h2>Tasks</h2>
+          <div className="Component Task">
+        <h3>Tasks</h3>
             <ul>
               {this.props.data.map((item,key)=>{
               return <li key={key}> <Link to={`/item/${item.id}`} >{item.Task}</Link></li>
@@ -44,6 +45,7 @@ editItem(item) {
           </div>
         <DataFormAdd/>
       </div>
+
     )
   }
 }

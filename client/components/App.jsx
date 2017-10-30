@@ -12,7 +12,7 @@ import Nav from './Nav'
 const App = () => (
     <div className='app-container'>
       <Router>
-        <div>
+        <div  className="container">
           <Nav/>
           <Route exact path='/Help' component={Help}/>
           <Route path='/item/:id' component={Item}/>

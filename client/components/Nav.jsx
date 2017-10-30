@@ -5,7 +5,6 @@ import Help from './Help'
 
 const Nav = (props) => (
     <div className='Nav'>
-        <h2>Nav Bar</h2>
           <ul>
             <li>
               <Link to='/' className='link'>Home</Link>

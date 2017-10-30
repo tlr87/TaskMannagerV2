@@ -4,7 +4,7 @@ import {HashRouter as Router, Route} from "react-router-dom"
 import Help from './Help'
 
 const Nav = (props) => (
-    <div className='Help Component'>
+    <div className='Nav'>
         <h2>Nav Bar</h2>
           <ul>
             <li>

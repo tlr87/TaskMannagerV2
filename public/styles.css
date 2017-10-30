@@ -2,9 +2,8 @@ body {
   font-family: sans-serif;
   margin: 0;
   background-color: black;
-  background-image: url(images/StarSky.jpg);
+  background-image: url(images/blueprint-final.png);
   color:#fff;
-  padding:35px;
 }
 
 a {
@@ -81,7 +80,7 @@ a:hover {
 
 .DataForm {
     width: 720px;
-    background-color:#000;
+    background-color:#3069b6;
     border:2px solid #fff;
     padding: 5px;
     margin:30px 0px;
@@ -101,33 +100,33 @@ input[type=radio] {
     position: absolute;
     z-index: 10;
     width: 82px;
-    height: 28px;
+    height: 58px;
     opacity: 0;
 }
 
 
 input[type="text"]{
   border-radius: 12px;
-  padding: 4px;
+  padding: 6px 12px;
   margin-left: 23px;
   margin-bottom: 16px;
-  border:2px solid #fff;
+  border:#fff dashed;
 	height: 22px;
 	width: 230px;
-  background-color:#000;
+  background-color:##2885B1;
   color:#fff;
 }
 
 
 input[type="number"]{
   border-radius: 12px;
-  padding: 4px;
+  padding: 6px 12px;
   margin-left: 23px;
   margin-bottom: 16px;
-  border:2px solid #fff;
+  border:#fff dashed;
   height: 22px;
   width: 230px;
-  background-color:#000;
+  background-color:##2885B1;
   color:#fff;
 }
 
@@ -145,7 +144,7 @@ input:focus {
   display: inline-block;
   width: 60px;
   height: 20px;
-
+  text-indent: 999999px;
   color: #fff;
   font-size: 14px;
   font-weight: normal;
@@ -167,8 +166,99 @@ input:focus {
 }
 
 .switch-field input:checked + label {
-  background-color: #e4e4e4!important;
-  -webkit-box-shadow: none;q
+  -webkit-box-shadow: none;
   box-shadow: none;
-  color: #000;
+  border:#fff dashed;
+}
+
+.Reader{
+}
+
+.Reader ul{
+  display: block;
+  float: right;
+}
+
+
+.Reader li{
+  display: block;
+}
+
+
+.Task{
+  
+}
+
+
+
+.Nav {
+  overflow: hidden;
+  background-color: rgba(78, 78, 78, 0.35);
+  top: 0;
+  width: 100%;
+  border-style: dashed;
+  border-width: 0 0 1px 0;
+  border-color: #FFF;
+}
+
+.Nav li {
+  margin: 0;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 94%;
+  border-style: solid;
+  border-width: thin;
+  border-color: Black;
+  cursor: pointer;
+}
+
+.Button {
+  margin: 0;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: Black;
+  cursor: pointer;
+  background-color: #333;
+}
+
+
+.Component {
+  padding: 2%;
+  color: White;
+}
+
+.Nav {
+  overflow: hidden;
+  background-color: rgba(78, 78, 78, 0.35);
+  top: 0;
+  width: 100%;
+  border-style: dashed;
+  border-width: 0 0 1px 0;
+  border-color: #FFF;
+}
+
+.Nav li {
+  margin: 0;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 94%;
+  border-style: solid;
+  border-width: thin;
+  border-color: Black;
+  cursor: pointer;
 }

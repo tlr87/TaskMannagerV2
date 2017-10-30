@@ -42,14 +42,16 @@ input[type=radio] {
 }
 
 input[type="text"],input[type="number"]{
-  border-radius: 12px;
   padding: 6px 12px;
   margin-left: 23px;
   margin-bottom: 16px;
   border:#fff dashed;
 	height: 22px;
 	width: 230px;
+  background-color:#000;
   color:#fff;
+  border:#fff dashed;
+
 }
 
 input span{
@@ -160,7 +162,7 @@ input:focus {
 .Component li {
 }
 
-.Component a {
+.Component a,input[type="submit"] {
   background-color: #000;
    border: none;
    color: white;
@@ -170,6 +172,7 @@ input:focus {
    display: inline-block;
    margin: 4px 2px;
    cursor: pointer;
+   border:#fff dashed;
 }
 
 

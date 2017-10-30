@@ -37,7 +37,7 @@ editItem(item) {
             {this.props.data
              .filter((item)=>{return item.Project === projParam})
              .map((item,key)=>{
-             return <li key={key}> <Link to={`/item/${item.id}`}>{item.Task}</Link></li>
+             return <li key={key}> <Link to={`/item/${item.id}`}>{item.Task}</Link>Assigned to {item.Person}</li>
             })}
           </ul>
         <DataFormAdd/>

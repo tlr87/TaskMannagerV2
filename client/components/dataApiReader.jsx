@@ -35,14 +35,6 @@ editItem(item) {
               })}
             </ul>
           </div>
-          <div className="Component Task">
-        <h3>Tasks</h3>
-            <ul>
-              {this.props.data.map((item,key)=>{
-              return <li key={key}> <Link to={`/item/${item.id}`} >{item.Task}</Link></li>
-              })}
-            </ul>
-          </div>
         <DataFormAdd/>
       </div>
 

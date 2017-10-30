@@ -58,7 +58,7 @@ componentWillUpdate(nextProps){
                   <input type="radio" value="Green" name="Colour"/><label className="Green" for="Green"><span>Green</span></label>
                   <input type="radio" value="Purple" name="Colour"/><label className="Purple" for="Purple"><span>Purple</span></label>
                   <input type="radio" value="Teal" name="Colour"/><label className="Teal" for="Teal"><span>Teal</span></label>
-                </div>
+               </div>
                 <br/>
              <input type="submit"/>
            </form>

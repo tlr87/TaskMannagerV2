@@ -25,19 +25,13 @@ editItem(item) {
     const projPerson = this.props.match.params.Project
     console.log(projParam);
     return(
-    <div>
-        <h2>People</h2>
-          <ul>
-            {this.props.data
-            .filter((item)=>{return item.Project === projPerson})
-            .map((item,key)=>{return <li key={key}>{item.Person}</li>})}
-          </ul>
+    <div className="Component">
         <h2>Tasks</h2>
           <ul>
             {this.props.data
              .filter((item)=>{return item.Project === projParam})
              .map((item,key)=>{
-             return <li key={key}> <Link to={`/item/${item.id}`}>{item.Task}</Link>Assigned to {item.Person}</li>
+             return <li key={item.Task}> <Link to={`/item/${item.id}`} className={item.Colour}>{item.Task} assigned to {item.Person}</Link></li>
             })}
           </ul>
         <DataFormAdd/>

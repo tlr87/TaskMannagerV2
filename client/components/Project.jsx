@@ -34,7 +34,7 @@ editItem(item) {
              return <li key={item.Task}> <Link to={`/item/${item.id}`} className={item.Colour}>{item.Task} assigned to {item.Person}</Link></li>
             })}
           </ul>
-        <DataFormAdd/>
+  
     </div>
     )
   }

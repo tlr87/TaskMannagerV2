@@ -12,9 +12,6 @@ const Nav = (props) => (
             <li>
               <Link to='/Help' className='link'>Help</Link>
             </li>
-            <li>
-              Task Mannager!
-            </li>
           </ul>
     </div>
   )

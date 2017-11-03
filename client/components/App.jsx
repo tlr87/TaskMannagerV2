@@ -11,6 +11,9 @@ import Nav from './Nav'
 
 const App = () => (
     <div className='app-container'>
+      <h1 className="Component">
+        Task Mannager!
+      </h1>
       <Router>
         <div  className="container">
           <Nav/>

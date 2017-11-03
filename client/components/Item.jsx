@@ -20,31 +20,35 @@ editItem(item) {
   this.props.dispatch(editData(item))
 }
 
-  render(){
-    return(
-      <div>
+render() {
+  return (
+    <div>
+      <div className="Component Item">
         <ul>
-          <h1>Item</h1>
-            {this.props.data.map((item,key)=>{
-                return <li key={key}>
-                    ID: {item.id}<br/>
-                    Project: {item.Project}<br/>
-                    Task:{item.Task}<br/>
-                    Person:{item.Person}<br/>
-                    Priority:{item.Priority}<br/>
-                    Details:{item.Details}<br/>
-                    Colour:{item.Colour}
-                  <a onClick={(evt)=> this.deleteItem(item)}>Del</a> {` `}
-                  <a onClick={(evt)=> this.editItem(item)}>Edit</a>
-                </li>
-              })}
+          <h2>Item</h2>
+          {this.props.data.map((item, key) => {
+            return <li key={key}>
+              <span>ID: {item.id}</span><br/>
+              <span>Project: {item.Project}</span><br/>
+              <span>Task:{item.Task}</span><br/>
+              <span>Person:{item.Person}</span><br/>
+              <span>Priority:{item.Priority}</span><br/>
+              <span>Details:{item.Details}</span><br/>
+              <span>Colour:{item.Colour}</span><br/>
+              <a onClick={(evt) => this.deleteItem(item)}>Delete</a>
+              {` `}
+              <a onClick={(evt) => this.editItem(item)}>Edit↴</a>
+            </li>
+          })}
         </ul>
+      </div>
+      <div>
         <DataFormEdit/>
       </div>
-    )
-  }
+    </div>
+  )
 }
-
+}
 
 const mapStateToProps = (state) => {
   return {data: state.data}

@@ -49,7 +49,7 @@ componentWillUpdate(nextProps){
              <input name="Priority" placeholder="Priority" value={Priority} type="number" onChange={(evt) => this.AddToData(evt)}/>
              <input name="Details" placeholder="Details" value={Details} type="text" onChange={(evt) => this.AddToData(evt)}/>
                <h4>Task Colour</h4>
-                <div className="radioButtons" onChange={(evt) => this.AddToData(evt)}>
+                <div className="radioButtons switch-field" onChange={(evt) => this.AddToData(evt)}>
                   <input type="radio" value="Blue" name="Colour"/><label className="Blue" for="Blue"><span>Blue</span></label>
                   <input type="radio" value="Red" name="Colour"/><label className="Red"  for="Red"><span>Red</span></label>
                   <input type="radio" value="Yellow" name="Colour"/><label className="Yellow" for="Yellow"><span>Yellow</span></label>
